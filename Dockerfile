@@ -12,9 +12,8 @@ COPY types types
 COPY pkg pkg
 COPY cmd cmd
 
-RUN apk update && apk upgrade ;\
-  apk --no-cache add git ca-certificates ;\
-  CGO_ENABLED=0 GOOS=linux go build -o /go/bin/popeye \
+RUN apk upgrade && apk add git ca-certificates
+RUN CGO_ENABLED=0 GOOS=linux go build -o /go/bin/popeye \
   -trimpath -ldflags="-w -s -X $PACKAGE/cmd.version=$VERSION" *.go
 
 # -----------------------------------------------------------------------------
