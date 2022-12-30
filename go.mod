@@ -3,9 +3,8 @@ module github.com/derailed/popeye
 go 1.13
 
 require (
-	github.com/Azure/go-autorest v14.0.0+incompatible // indirect
 	github.com/Azure/go-autorest/autorest v0.10.0 // indirect
-	github.com/aws/aws-sdk-go v1.29.32
+	github.com/aws/aws-sdk-go v1.33.0
 	github.com/magiconair/properties v1.8.1
 	github.com/prometheus/client_golang v1.5.1
 	github.com/rs/zerolog v1.18.0
